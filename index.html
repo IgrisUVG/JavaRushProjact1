@@ -7,40 +7,45 @@
 </head>
 <body>
 <header>
-    <nav>
-        <ul>
-            <li><a href="#">Корпоративным клиентам</a></li>
-            <li><a href="#">Авиабилеты</a></li>
-            <li><a href="#">Справка</a></li>
-            <li id="lang"><a href="#">Русский</a></li>
-        </ul>
-    </nav>
-<!--    <img src="img/logo.png">-->
-    <h1>Лучшие авиабилеты по самым низким ценам</h1>
-    <nav>
-        <ul>
-            <li><a href="#">Авиабилеты</a></li>
-            <li><a href="#">Ж/д билеты</a></li>
-            <li><a href="#">Автобусы</a></li>
-            <li><a href="#">Отели</a></li>
-            <li><a href="#">Страхование</a></li>
-        </ul>
-    </nav>
-    <form>
-        <input placeholder="Откуда" value="Варшава">
-        <input placeholder="Куда">
-        <input placeholder="Туда">
-        <input placeholder="Обратно">
-        <input placeholder="Пассажиры, класс">
-        <button>Найти</button>
-    </form>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#">Корпоративным клиентам</a></li>
+                <li><a href="#">Авиабилеты</a></li>
+                <li><a href="#">Справка</a></li>
+                <li id="lang"><a href="#">Русский</a></li>
+            </ul>
+        </nav>
+        <!--    <img src="img/logo.png">-->
+        <h1>Лучшие авиабилеты по самым низким ценам</h1>
+        <nav id="sections">
+            <ul>
+                <li><a href="#">Авиабилеты</a></li>
+                <li><a href="#">Ж/д билеты</a></li>
+                <li><a href="#">Автобусы</a></li>
+                <li><a href="#">Отели</a></li>
+                <li><a href="#">Страхование</a></li>
+            </ul>
+        </nav>
+        <form>
+            <fieldset>
+                <input placeholder="Откуда" value="Варшава">
+                <input placeholder="Куда">
+                <input placeholder="Туда">
+                <input placeholder="Обратно">
+                <input placeholder="Пассажиры, класс">
+            </fieldset>
+            <button>Найти</button>
+            <p id="multiroute">Сложный маршрут</p>
+        </form>
+    </div>
 </header>
 <main>
     <aside>
-        <section>
+        <section class="wrap">
             <h3>Управляйте вашими билетами в Telegram</h3>
         </section>
-        <section>
+        <section class="wrap">
             <h3>Билеты на автобус по Китаю и Европе</h3>
         </section>
     </aside>
@@ -90,13 +95,23 @@
             </section>
         </div>
     </article>
-    <article>
+    <article id="top-ten">
         <div>
             <h2>ТОП-10 авиакомпаний</h2>
             <a href="#">Подробнее</a>
         </div>
-
-        <div class="wrap"></div>
+        <div class="wrap">
+            <span>1</span><span>Эмирейтс</span><span>4.7</span>
+            <span>2</span><span>Катар Эйрвейз</span><span>4.7</span>
+            <span>3</span><span></span><span>4.7</span>
+            <span>4</span><span></span><span>4.7</span>
+            <span>5</span><span></span><span>4.7</span>
+            <span>6</span><span></span><span>4.7</span>
+            <span>7</span><span></span><span>4.7</span>
+            <span>8</span><span></span><span>4.7</span>
+            <span>9</span><span></span><span>4.7</span>
+            <span>10</span><span></span><span>4.7</span>
+        </div>
     </article>
     <article>
         <h2>Горящие распродажи авиарейсов</h2>
