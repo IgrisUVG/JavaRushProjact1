@@ -22,8 +22,17 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
-
+/*___________________________________*/
 #lang::before {
     content: '\1F310';
+}
+
+#programs {
+    display: flex;
+}
+
+#programs img {
+    width: 150px;
 }
