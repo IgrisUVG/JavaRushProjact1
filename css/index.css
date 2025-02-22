@@ -24,6 +24,19 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
 }
+
+header {
+    background-color: var(--main-color);
+}
+
+h1 {
+    color: #ffa9bc;
+}
+
+nav ul {
+    display: flex;
+}
+
 /*___________________________________*/
 #lang::before {
     content: '\1F310';
