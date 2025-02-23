@@ -184,7 +184,7 @@
         </section>
         <section>
             <h2>Частые вопросы</h2>
-            <div class="wrap ">
+            <div id="faq" class="wrap ">
                 <p><a href="#">Как забронировать авиабилет</a></p>
                 <p><a href="#">Как оплатить авиабилет</a></p>
                 <p><a href="#">Как зарегистрироваться на рейс</a></p>
@@ -196,18 +196,20 @@
         <aside id="best-offers" class="wrap">
             <p>Лучшие предложения для путешествий</p>
             <img src="img/icons/subscribe-laptop.svg">
-            <input type="email" placeholder="Email *">
-            <button>&gt;</button>
+            <form>
+                <input type="email" placeholder="Email *">
+                <button>&gt;</button>
+            </form>
         </aside>
     </article>
 </main>
 <footer>
     <div>
         <article id="partners">
-            <img src="img/part/IATAAccreditedAgent.svg" width="70px">
-            <img src="img/part/pci-logo-teal.svg" width="70px">
-            <img src="img/part/Visa_2021.svg" width="70px">
-            <img src="img/part/Mastercard-logo.svg" width="70px">
+            <img src="img/part/IATAAccreditedAgent.svg">
+            <img src="img/part/pci-logo-teal.svg">
+            <img src="img/part/Visa_2021.svg">
+            <img src="img/part/Mastercard-logo.svg">
         </article>
         <article id="links">
             <section>
@@ -257,7 +259,6 @@
                 <p>Qatar Airways</p>
                 <p>Ryanair</p>
                 <p>Air Baltic</p>
-                <p></p>
                 <a href="#">Все авиакомпании →</a>
             </section>
             <section>
@@ -266,16 +267,16 @@
                 <p>Сравнение цен</p>
                 <p>Расписание рейсов</p>
                 <p>Акции</p>
-                <p></p>
-                <p></p>
                 <a href="#">Карта сайта →</a>
             </section>
         </article>
         <article>
             <section id="programs">
                 <div>Партнерская программа</div>
-                <div><img src="../img/icons/google-play.svg"></div>
-                <div><img src="../img/icons/app-store-apple.svg"></div>
+                <div>
+                    <img src="img/icons/google-play.svg">
+                    <img src="img/icons/app-store-apple.svg">
+                </div>
             </section>
             <section id="social">
                 <img src="img/icons/facebook.svg">

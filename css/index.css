@@ -73,7 +73,7 @@
     main article {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(auto-fit, 1fr);
+        /*grid-template-rows: repeat(auto-fit, 1fr);*/
         gap: 1.5em;
     }
 
@@ -88,13 +88,59 @@
         justify-content: space-between;
     }
 
+    /*#links {*/
+    /*    display: grid;*/
+    /*    grid-template-columns: repeat(6, 1fr);*/
+    /*}*/
     #partners,
     #links,
     footer article:last-child {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin: 2em 0;
+        margin: 1.5em 0;
+    }
+
+    #links section {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5em;
+    }
+
+    #links section a {
+        margin-top: auto;
+        /*justify-self: end;*/
+    }
+
+    #best-offers {
+        display: grid;
+        background-color: #d0d1fb;
+    }
+
+    #best-offers img {
+        width: 100px;
+    }
+
+    footer article:last-child {
+        margin: 2em 0 3em;
+        border-top: 1px solid #d0d1fb;
+        padding-top: 2em;
+    }
+
+    #programs div:first-child {
+        color: #3a92f8;
+        border: 1px solid;
+        border-radius: 5px;
+        width: 250px;
+        height: 45px;
+        margin-right: 1.5em;
+        text-align: center;
+        padding-top: calc(45px / 4);
+    }
+
+    #programs div:last-child {
+        display: flex;
+        column-gap: .8em;
     }
 }
 
@@ -195,9 +241,30 @@ form button {
     color: black;
 }
 
+main a,
+footer a {
+    color: #3a92f8;
+}
+
+.wrap {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    padding: 1.5em;
+}
+
+#pop section p:last-child {
+    color: var(--accent-color);
+}
+
 #top-ten div:first-child {
     display: flex;
     justify-content: space-between;
+}
+
+#top-ten div:first-child a {
+    font-size: .8em;
+    align-self: center;
 }
 
 #top-ten .wrap {
@@ -219,19 +286,13 @@ form button {
     margin-right: 5px;
 }
 
-.wrap {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    padding: 1.5em;
-}
 
-#pop section p:last-child {
-    color: var(--accent-color);
+#faq p,
+#hot p {
+    padding-bottom: 1.5em;
 }
 
 #hot p {
-    padding-bottom: 1.5em;
     font-size: .9em;
     /*text-align: justify;*/
 }
@@ -239,14 +300,6 @@ form button {
 /*#hot p:not(:last-child) {
 
 }*/
-
-#best-offers {
-    background-color: #d0d1fb;
-}
-
-#best-offers img {
-    width: 20%;
-}
 
 footer {
     background-color: white;
@@ -272,10 +325,18 @@ footer {
     line-height: 1;
 }
 
+#partners img {
+    height: 40px;
+}
+
 #programs {
     display: flex;
 }
 
 #programs img {
     width: 150px;
+}
+
+#social img {
+    width: 40px;
 }
