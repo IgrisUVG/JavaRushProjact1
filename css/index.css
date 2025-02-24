@@ -36,6 +36,31 @@
 
 /*——————————————————————————————————————————————————————*/
 @media (min-width: 1200px) {
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        padding: 1em;
+        vertical-align: baseline;
+    }
+
+    #lang a,
+    nav ul li a {
+        color: white;
+        font-size: .85em;
+        text-wrap: nowrap;
+        margin: 0 1em 0 0;
+    }
+
+    #lang::before {
+        /*content: '\1F310';*/
+        content: url("../img/icons/language.svg");
+        display: inline-block;
+        width: 20px;
+        vertical-align: middle;
+        line-height: 1;
+        margin-right: 5px;
+    }
+
     form {
         display: grid;
         grid-template-areas:
@@ -53,11 +78,11 @@
         margin: 0;
     }
 
-    fieldset input:first-child {
+    #from {
         border-radius: 5px 0 0 5px;
     }
 
-    fieldset input:last-child {
+    #passengers {
         border-radius: 0 5px 5px 0;
     }
 
@@ -115,12 +140,15 @@
     #best-offers {
         display: grid;
         background-color: #d0d1fb;
+        background-image: url("../img/icons/subscribe-laptop.svg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 100px 100px;
     }
 
-    #best-offers img {
-        width: 100px;
-    }
-
+    /*#best-offers img {*/
+    /*    width: 100px;*/
+    /*}*/
     footer article:last-child {
         margin: 2em 0 3em;
         border-top: 1px solid #d0d1fb;
@@ -199,24 +227,31 @@ h4 {
     width: 150px;
 }
 
-nav ul {
+#site-nav {
     display: flex;
-    list-style-type: none;
-    padding: 1em;
-    vertical-align: baseline;
+    align-items: center;
 }
-
-nav ul li a {
-    color: white;
-    font-size: .85em;
-    margin: 0 1em 0 0;
+form {
+    position: relative;
 }
-
 form input {
-    padding: 2em;
+    display: block;
+    outline: none;
+    padding: 1em;
     border: none;
 }
 
+form label {
+    display: block;
+    position: absolute;
+    color: #aaa;
+    font-size: 20px;
+}
+#from + label {
+    top: 1em;
+    left: 1.5em;
+    font-size: .70em;
+}
 form button {
     grid-area: find-button;
     min-width: 136px;
@@ -230,17 +265,30 @@ form button {
 
 #sections a {
     background-color: #8853dd;
-    padding: 7px 20px;
+    padding: 8px 20px;
     border-radius: 14px;
     font-weight: bold;
     text-wrap: nowrap;
+}
+
+#sections a span {
+    background-color: #72b62b;
+    padding: 2px 5px;
+    border-radius: 14px;
+    margin-left: 8px;
+}
+
+#sections li:nth-child(4) a {
+    padding-right: 8px;
 }
 
 #sections li:first-child a {
     background-color: white;
     color: black;
 }
-
+#multiroute a {
+    color: white;
+}
 main a,
 footer a {
     color: #3a92f8;
@@ -253,7 +301,7 @@ footer a {
     padding: 1.5em;
 }
 
-#pop section p:last-child {
+#pop p:nth-child(2n) {
     color: var(--accent-color);
 }
 
@@ -269,16 +317,22 @@ footer a {
 
 #top-ten .wrap {
     display: grid;
-    grid-template-columns: 2em 2fr 1fr;
-    grid-auto-flow: row;
+    /*grid-template-columns: 2em 2fr 1fr;*/
+    /*grid-auto-flow: row;*/
     row-gap: 1em;
 }
-
-#top-ten p:nth-child(3n) {
+#top-ten .wrap section {
+    display: flex;
+}
+#top-ten .wrap a {
+    margin-left: 1em;
+}
+#top-ten .wrap p:nth-child(3n) {
+    margin-left: auto;
     text-align: right;
 }
 
-#top-ten p:nth-child(3n)::before {
+#top-ten .wrap p:nth-child(3n)::before {
     content: url("../img/icons/star.svg");
     display: inline-block;
     width: 25px;
@@ -306,16 +360,6 @@ footer {
 }
 
 /*___________________________________*/
-
-#lang::before {
-    /*content: '\1F310';*/
-    content: url("../img/icons/language.svg");
-    display: inline-block;
-    width: 20px;
-    vertical-align: middle;
-    line-height: 1;
-    margin-right: 5px;
-}
 
 #multiroute::before {
     content: url("../img/icons/multiroute.svg");
