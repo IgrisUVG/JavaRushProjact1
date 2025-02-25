@@ -31,8 +31,17 @@
         </nav>
         <form>
             <fieldset>
-                <input value="Варшава" id="from"><label for="from">Откуда</label>
-                <input id="to"><label for="to"><!--Куда--></label>
+                <label for="from">Откуда</label>
+                <input list="from-airports" value="Варшава" id="from">
+                <datalist id="from-airports">
+                    <option value="Варшава" label="Выбранный город">
+                    <option value="Кишинев">
+                    <option value="Балице">
+                </datalist>
+                <input list="to-airports" id="to"><label for="to"><!--Куда--></label>
+                <datalist id="to-airports">
+
+                </datalist>
                 <div><img src="img/icons/swap.svg" alt=""></div>
                 <input id="there"><label for="there"><!--Туда--></label>
                 <input id="back"><label for="back"><!--Обратно--></label>
@@ -313,7 +322,7 @@
             <section id="social">
                 <a href="#"><img src="img/icons/facebook.svg" alt=""></a>
                 <a href="#"><img src="img/icons/instagram.svg" alt=""></a>
-            <a href="#"><img src="img/icons/telegram.svg" alt=""></a>
+                <a href="#"><img src="img/icons/telegram.svg" alt=""></a>
             </section>
         </article>
     </div>
