@@ -33,10 +33,43 @@
             <fieldset>
                 <input value="Варшава" id="from"><label for="from">Откуда</label>
                 <input id="to"><label for="to"><!--Куда--></label>
+                <div><img src="img/icons/swap.svg" alt=""></div>
                 <input id="there"><label for="there"><!--Туда--></label>
                 <input id="back"><label for="back"><!--Обратно--></label>
                 <input id="passengers"><label for="passengers"><!--Пассажиры, класс--></label>
-
+                <div>
+                    <p>Максимум 9 пассажиров</p>
+                    <section>
+                        <p>Взрослые</p>
+                        <p>Старше 12 лет</p>
+                        <img src="img/icons/minus-thin.svg" alt="">
+                        <input type="number">
+                        <img src="img/icons/plus-thin.svg" alt="">
+                    </section>
+                    <section>
+                        <p>Дети</p>
+                        <p>2-12 лет</p>
+                        <img src="img/icons/minus-thin.svg" alt="">
+                        <input type="number">
+                        <img src="img/icons/plus-thin.svg" alt="">
+                    </section>
+                    <section>
+                        <p>Младенцы</p>
+                        <p>до 2 лет</p>
+                        <img src="img/icons/minus-thin.svg" alt="">
+                        <input type="number">
+                        <img src="img/icons/plus-thin.svg" alt="">
+                    </section>
+                    <section>
+                        <p>Класс</p>
+                        <form>
+                            <label for="any">Любой</label><input type="radio" name="class" id="any">
+                            <label for="business">Бизнес</label><input type="radio" name="class" id="business">
+                            <label for="economy">Эконом</label><input type="radio" name="class" id="economy">
+                        </form>
+                    </section>
+                    <button type="button">OK</button>
+                </div>
             </fieldset>
             <button type="button">Найти</button>
             <p id="multiroute"><a href="#">Сложный маршрут</a></p>
