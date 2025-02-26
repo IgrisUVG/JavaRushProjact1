@@ -231,9 +231,11 @@ h4 {
     display: flex;
     align-items: center;
 }
+
 form {
     position: relative;
 }
+
 form input {
     display: block;
     outline: none;
@@ -247,11 +249,33 @@ form label {
     color: #aaa;
     font-size: 20px;
 }
+
 #from + label {
     top: 1em;
     left: 1.5em;
     font-size: .70em;
 }
+
+#swap {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+}
+
+.collapsed {
+    visibility: collapse;
+}
+
+.not-visible {
+    visibility: hidden;
+}
+
+#choice-passengers {
+    position: absolute;
+}
+
 form button {
     grid-area: find-button;
     min-width: 136px;
@@ -286,9 +310,11 @@ form button {
     background-color: white;
     color: black;
 }
+
 #multiroute a {
     color: white;
 }
+
 main a,
 footer a {
     color: #3a92f8;
@@ -321,12 +347,15 @@ footer a {
     /*grid-auto-flow: row;*/
     row-gap: 1em;
 }
+
 #top-ten .wrap section {
     display: flex;
 }
+
 #top-ten .wrap a {
     margin-left: 1em;
 }
+
 #top-ten .wrap p:nth-child(3n) {
     margin-left: auto;
     text-align: right;

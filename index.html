@@ -42,11 +42,11 @@
                 <datalist id="to-airports">
 
                 </datalist>
-                <div><img src="img/icons/swap.svg" alt=""></div>
+                <div id="swap"><img src="img/icons/swap.svg" alt=""></div>
                 <input id="there"><label for="there"><!--Туда--></label>
                 <input id="back"><label for="back"><!--Обратно--></label>
                 <input id="passengers"><label for="passengers"><!--Пассажиры, класс--></label>
-                <div>
+                <div id="choice-passengers" class="collapsed">
                     <p>Максимум 9 пассажиров</p>
                     <section>
                         <p>Взрослые</p>
@@ -101,8 +101,8 @@
             <a href="#">Найти билеты</a>
         </section>
     </aside>
-    <article>
-        <section>
+    <section>
+        <article>
             <div>
                 <h2>Популярные направления</h2>
             </div>
@@ -128,66 +128,66 @@
                 <p>Варшава → Денпасар-Бали</p>
                 <p>от 25 573 &#164;</p>
             </div>
-        </section>
-        <section id="top-ten">
+        </article>
+        <article id="top-ten">
             <div>
                 <h2>ТОП-10 авиакомпаний</h2>
                 <a href="#">Подробнее</a>
             </div>
             <div class="wrap">
-                <section>
+                <article>
                     <p>1</p>
                     <a>Эмирейтс</a>
                     <p>4.7</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>2</p>
                     <a>Катар Эйрвейз</a>
                     <p>4.7</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>3</p>
                     <a>Тюркиш Эрлайнз</a>
                     <p>4.7</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>4</p>
                     <a>Сингапур Эйрлайнз</a>
                     <p>4.7</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>5</p>
                     <a>Кореан Эйр</a>
                     <p>4.7</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>6</p>
                     <a>Этихад Эйрвэйз</a>
                     <p>4.6</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>7</p>
                     <a>Катай Пасифик</a>
                     <p>4.5</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>8</p>
                     <a>Эйр Астана</a>
                     <p>4.5</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>9</p>
                     <a>Верджин Атлантик Эйрвэйз</a>
                     <p>4.5</p>
-                </section>
-                <section>
+                </article>
+                <article>
                     <p>10</p>
                     <a>Эйр Нью Зиланд</a>
                     <p>4.5</p>
-                </section>
+                </article>
             </div>
-        </section>
-        <section>
+        </article>
+        <article>
             <h2>Горящие распродажи авиарейсов</h2>
             <div id="hot" class="wrap">
                 <h4>Как найти авиабилеты со скидкой онлайн</h4>
@@ -222,8 +222,8 @@
                     Наша система динамики цен определит лучшее время для покупки, а также подскажет высокий и низкий
                     сезон для путешествий по тем или иным маршрутам.</p>
             </div>
-        </section>
-        <section>
+        </article>
+        <article>
             <h2>Частые вопросы</h2>
             <div id="faq" class="wrap ">
                 <p><a href="#">Как забронировать авиабилет</a></p>
@@ -233,27 +233,27 @@
                 <p><a href="#">Бонусная программа</a></p>
                 <p><a href="#">Все темы</a></p>
             </div>
-        </section>
+        </article>
         <aside id="best-offers" class="wrap">
             <p>Лучшие предложения для путешествий</p>
             <!--            <img src="img/icons/subscribe-laptop.svg">-->
             <form>
                 <input type="email" placeholder="Email *">
-                <button>Подписаться</button>
+                <button type="button">Подписаться</button>
             </form>
         </aside>
-    </article>
+    </section>
 </main>
 <footer>
     <div>
-        <section id="partners">
+        <article id="partners">
             <img src="img/part/IATAAccreditedAgent.svg" alt="">
             <img src="img/part/pci-logo-teal.svg" alt="">
             <img src="img/part/Visa_2021.svg" alt="">
             <img src="img/part/Mastercard-logo.svg" alt="">
-        </section>
-        <article id="links">
-            <section>
+        </article>
+        <section id="links">
+            <article>
                 <h4>Страны</h4>
                 <p><a href="#">Испания</a></p>
                 <p><a href="#">Турция</a></p>
@@ -262,8 +262,8 @@
                 <p><a href="#">Польша</a></p>
                 <p><a href="#">Франция</a></p>
                 <a href="#">Все страны →</a>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h4>Города</h4>
                 <p><a href="#">Кишинев</a></p>
                 <p><a href="#">Дубай</a></p>
@@ -272,8 +272,8 @@
                 <p><a href="#">Париж</a></p>
                 <p><a href="#">Франкфурт</a></p>
                 <a href="#">Все города →</a>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h4>Направления</h4>
                 <p><a href="#">Кишинев - Стамбул</a></p>
                 <p><a href="#">Кишинев - Анталия</a></p>
@@ -282,8 +282,8 @@
                 <p><a href="#">Кишинев - Тбилиси</a></p>
                 <p><a href="#">Варшава - Стамбул</a></p>
                 <a href="#">Все направления →</a>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h4>Аэропорты</h4>
                 <p><a href="#">Ф. Шопен (Варшава)</a></p>
                 <p><a href="#">Франкфурт Интернешн...</a></p>
@@ -292,8 +292,8 @@
                 <p><a href="#">Аэропорт Стамбула (Ста...</a></p>
                 <p><a href="#">Шарль Де Голль (Париж)</a></p>
                 <a href="#">Все аэропорты →</a>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h4>Авиакомпании</h4>
                 <p><a href="#">Тюркиш Эрлайнз</a></p>
                 <p><a href="#">Wizz Air Украина</a></p>
@@ -301,30 +301,30 @@
                 <p><a href="#">Ryanair</a></p>
                 <p><a href="#">Air Baltic</a></p>
                 <a href="#">Все авиакомпании →</a>
-            </section>
-            <section>
+            </article>
+            <article>
                 <h4>Наши сервисы</h4>
                 <p><a href="#">Рейтинг авиакомпаний</a></p>
                 <p><a href="#">Сравнение цен</a></p>
                 <p><a href="#">Расписание рейсов</a></p>
                 <p><a href="#">Акции</a></p>
                 <a href="#">Карта сайта →</a>
-            </section>
-        </article>
-        <article>
-            <section id="programs">
+            </article>
+        </section>
+        <section>
+            <article id="programs">
                 <div><a href="#">Партнерская программа</a></div>
                 <div>
                     <img src="img/icons/google-play.svg" alt="">
                     <img src="img/icons/app-store-apple.svg" alt="">
                 </div>
-            </section>
-            <section id="social">
+            </article>
+            <article id="social">
                 <a href="#"><img src="img/icons/facebook.svg" alt=""></a>
                 <a href="#"><img src="img/icons/instagram.svg" alt=""></a>
                 <a href="#"><img src="img/icons/telegram.svg" alt=""></a>
-            </section>
-        </article>
+            </article>
+        </section>
     </div>
 </footer>
 <script src="js/index.js"></script>
