@@ -6,6 +6,10 @@
         margin: 0 1em;
     }
 
+    #lang a span {
+        display: none;
+    }
+
     fieldset {
         display: flex;
         flex-direction: column;
@@ -32,35 +36,40 @@
         width: 65%;
         margin: 0 auto;
     }
+
+    /*#lang a span {*/
+    /*    visibility: hidden;*/
+    /*}*/
 }
 
 /*——————————————————————————————————————————————————————*/
 @media (min-width: 1200px) {
-    nav ul {
-        display: flex;
-        list-style-type: none;
-        padding: 1em;
-        vertical-align: baseline;
+    /*nav ul {*/
+    /*    display: flex;*/
+    /*    list-style-type: none;*/
+    /*    padding: 1em;*/
+    /*    vertical-align: baseline;*/
+    /*}*/
+    /*#lang a,*/
+    /*nav ul li a {*/
+    /*    color: white;*/
+    /*    font-size: .85em;*/
+    /*    text-wrap: nowrap;*/
+    /*    margin: 0 1em 0 0;*/
+    /*}*/
+    #lang a span {
+        display: inline;
     }
 
-    #lang a,
-    nav ul li a {
-        color: white;
-        font-size: .85em;
-        text-wrap: nowrap;
-        margin: 0 1em 0 0;
-    }
-
-    #lang::before {
-        /*content: '\1F310';*/
-        content: url("../img/icons/language.svg");
-        display: inline-block;
-        width: 20px;
-        vertical-align: middle;
-        line-height: 1;
-        margin-right: 5px;
-    }
-
+    /*#lang::before {*/
+    /*    !*content: '\1F310';*!*/
+    /*    content: url("../img/icons/language.svg");*/
+    /*    display: inline-block;*/
+    /*    width: 20px;*/
+    /*    vertical-align: middle;*/
+    /*    line-height: 1;*/
+    /*    margin-right: 5px;*/
+    /*}*/
     form {
         display: grid;
         grid-template-areas:
@@ -214,6 +223,31 @@ h2, h3 {
 h2,
 h4 {
     padding-bottom: .5em;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 1em;
+    vertical-align: baseline;
+}
+
+#lang a,
+nav ul li a {
+    color: white;
+    font-size: .85em;
+    text-wrap: nowrap;
+    margin: 0 1em 0 0;
+}
+
+#lang::before {
+    /*content: '\1F310';*/
+    content: url("../img/icons/language.svg");
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+    line-height: 1;
+    margin-right: 5px;
 }
 
 #site-head {
