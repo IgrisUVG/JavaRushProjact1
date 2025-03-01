@@ -34,6 +34,15 @@
         border-bottom: 1px solid #ccc;
     }
 
+    #there {
+        border-right: #ccc 1px solid;
+    }
+
+    #back {
+        /*background-image: url("../img/icons/calendar4.svg");*/
+        background: white url("../img/icons/calendar4.svg") no-repeat right 1.5em center;
+    }
+
     #passengers {
         border-top: 1px solid #ccc;
     }
@@ -75,9 +84,9 @@
         border-radius: 0 0 10px 10px;
     }
 
-
     #pops p:nth-child(2n) {
         color: var(--accent-color);
+        line-height: 2em;
     }
 
 }
@@ -196,18 +205,6 @@
         /*justify-self: end;*/
     }
 
-    #best-offers {
-        display: grid;
-        background-color: #d0d1fb;
-        background-image: url("../img/icons/subscribe-laptop.svg");
-        background-repeat: no-repeat;
-        background-position: top right;
-        background-size: 100px 100px;
-    }
-
-    /*#best-offers img {*/
-    /*    width: 100px;*/
-    /*}*/
     footer section:last-child {
         margin: 2em 0 3em;
         border-top: 1px solid #d0d1fb;
@@ -233,7 +230,8 @@
 
 /*——————————————————————————————————————————————————————*/
 :root {
-    --main-color: #6E36F7;
+    /*--main-color: #6E36F7;*/
+    --main-color: #7413dc;
     --accent-color: #FF4D4D;
 }
 
@@ -257,6 +255,7 @@ a {
 header {
     background-color: var(--main-color);
     color: white;
+    padding-bottom: 3em;
 }
 
 h1 {
@@ -344,6 +343,7 @@ form label {
     position: absolute;
     width: 32px;
     height: 32px;
+    background-color: white;
     border: 1px solid var(--accent-color);
     border-radius: 50%;
 }
@@ -395,11 +395,27 @@ form button {
     color: black;
 }
 
+#multiroute {
+    margin-top: 1.2em;
+}
+
 #multiroute a {
     color: white;
 }
 
-main aside section p:before {
+.wrap {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    margin: 1em 0;
+    padding: 1.5em;
+}
+
+/*#banners .wrap {*/
+/*    margin: 1em 0;*/
+/*}*/
+
+#banners p:before {
     content: url("../img/icons/check-smooth.svg");
     margin-right: 5px;
 }
@@ -409,12 +425,6 @@ footer a {
     color: #3a92f8;
 }
 
-.wrap {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    padding: 1.5em;
-}
 
 #pops p:nth-child(2n) {
     color: var(--accent-color);
@@ -472,6 +482,35 @@ footer a {
 /*#hot p:not(:last-child) {
 
 }*/
+#faq {
+    
+}
+
+#best-offers {
+    /*display: grid;*/
+    background-color: #d0d1fb;
+    background-image: url("../img/icons/subscribe-laptop.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 100px 100px;
+}
+
+#best-offers form {
+    display: flex;
+}
+
+#best-offers button {
+    /*background: var(--accent-color) url("../img/icons/chevron-smooth-w.svg") no-repeat center center;*/
+}
+
+#best-offers button img {
+    transform: rotate(-90deg);
+    width: 14px;
+}
+
+#best-offers form span {
+    display: none;
+}
 
 footer {
     background-color: white;
