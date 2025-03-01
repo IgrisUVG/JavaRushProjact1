@@ -11,22 +11,73 @@
     }
 
     fieldset {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         margin-bottom: 1em;
     }
 
     fieldset input {
         display: block;
-        border-bottom: 1px solid gray;
+        width: 100%;
+        height: 100%;
+        min-width: 136px;
+        min-height: 64px;
+        padding: 1em;
+        /*border-bottom: 1px solid gray;*/
     }
 
-    fieldset input:first-child {
+    #from, #to, #passengers {
+        grid-column: span 2;
+    }
+
+    #from, #to {
+        border-bottom: 1px solid #ccc;
+    }
+
+    #passengers {
+        border-top: 1px solid #ccc;
+    }
+
+    #swap {
+        left: auto;
+        right: 1.3em;
+        top: 3em;
+        transform: rotate(90deg);
+    }
+
+    /*fieldset input:first-child*/
+    #from {
         border-radius: 5px 5px 0 0;
     }
 
     fieldset input:last-child {
         border-radius: 0 0 5px 5px;
+    }
+
+    #pops {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    }
+
+    #pops div {
+        background-color: white;
+        padding: .9em;
+    }
+
+    #pops div:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #pops div:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+
+    #pops p:nth-child(2n) {
+        color: var(--accent-color);
     }
 
 }
@@ -83,7 +134,7 @@
     fieldset {
         display: grid;
         grid-area: inputs;
-        /*gap: 1px;*/
+        gap: 1px;
         grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) repeat(2, minmax(125px, 1fr)) minmax(180px, 1fr);
         margin: 0;
     }
@@ -111,13 +162,13 @@
         gap: 1.5em;
     }
 
-    #pop {
+    #pops {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3em;
     }
 
-    /*#pop section {*/
+    /*#pops section {*/
     /*    display: flex;*/
     /*    justify-content: space-between;*/
     /*}*/
@@ -273,7 +324,7 @@ form input {
     display: block;
     outline: none;
     padding: 1em;
-    border: none;
+    /*border: none;*/
 }
 
 form label {
@@ -311,9 +362,9 @@ form label {
 
 form button {
     grid-area: find-button;
-    min-width: 136px;
     width: 100%;
     height: 100%;
+    min-width: 136px;
     min-height: 64px;
     background-color: var(--accent-color);
     color: white;
@@ -365,7 +416,7 @@ footer a {
     padding: 1.5em;
 }
 
-#pop p:nth-child(2n) {
+#pops p:nth-child(2n) {
     color: var(--accent-color);
 }
 
@@ -408,10 +459,10 @@ footer a {
 }
 
 
-#faq p,
-#hot p {
-    padding-bottom: 1.5em;
-}
+/*#faq p,*/
+/*#hot p {*/
+/*    padding-bottom: 1.5em;*/
+/*}*/
 
 #hot p {
     font-size: .9em;

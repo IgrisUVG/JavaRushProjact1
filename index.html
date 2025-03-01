@@ -123,9 +123,9 @@
                 </div>
             </div>
         </div>
-    <div class="calendar-note">
-      Для отображения цен необходимо выбрать маршрут
-    </div>
+        <div class="calendar-note">
+            Для отображения цен необходимо выбрать маршрут
+        </div>
     </div>
 </dialog>
 <header>
@@ -160,14 +160,18 @@
                     <option value="Кишинев">
                     <option value="Балице">
                 </datalist>
-                <input list="to-airports" id="to"><label for="to"><!--Куда--></label>
+                <label for="to">Куда</label>
+                <input list="to-airports" id="to">
                 <datalist id="to-airports">
 
                 </datalist>
                 <div id="swap"><img src="img/icons/swap.svg" alt=""></div>
-                <input id="there"><label for="there"><!--Туда--></label>
-                <input id="back"><label for="back"><!--Обратно--></label>
-                <input id="passengers"><label for="passengers"><!--Пассажиры, класс--></label>
+                <label for="there">Туда</label>
+                <input id="there">
+                <label for="back">Обратно</label>
+                <input id="back">
+                <label for="passengers">Пассажиры, класс</label>
+                <input id="passengers">
                 <!--div-- id="choice-passengers" class="collapsed">
                     <p>Максимум 9 пассажиров</p>
                     <section>
@@ -225,30 +229,48 @@
     </aside>
     <section>
         <article>
-            <div>
-                <h2>Популярные направления</h2>
-            </div>
-            <div id="pop" class="wrap">
-                <p>Варшава → Милан</p>
-                <p>от 771 &#164;</p>
-                <p>Варшава → Лондон</p>
-                <p>от 1 001 &#164;</p>
-                <p>Варшава → Аликанте</p>
-                <p>от 1 424 &#164;</p>
-                <p>Варшава → Мадрид</p>
-                <p>от 1 646 &#164;</p>
-                <p>Варшава → Амстердам</p>
-                <p>от 3 256 &#164;</p>
-                <p>Варшава → Лиссабон</p>
-                <p>от 3 364 &#164;</p>
-                <p>Варшава → Париж</p>
-                <p>от 4 077 &#164;</p>
-                <p>Варшава → Нью-Йорк</p>
-                <p>от 21 277 &#164;</p>
-                <p>Варшава → Барселона</p>
-                <p>от 1 663 &#164;</p>
-                <p>Варшава → Денпасар-Бали</p>
-                <p>от 25 573 &#164;</p>
+            <h2>Популярные направления</h2>
+            <div id="pops">
+                <div>
+                    <p>Варшава → Милан</p>
+                    <p>от 771 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Лондон</p>
+                    <p>от 1 001 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Аликанте</p>
+                    <p>от 1 424 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Мадрид</p>
+                    <p>от 1 646 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Амстердам</p>
+                    <p>от 3 256 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Лиссабон</p>
+                    <p>от 3 364 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Париж</p>
+                    <p>от 4 077 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Нью-Йорк</p>
+                    <p>от 21 277 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Барселона</p>
+                    <p>от 1 663 &#164;</p>
+                </div>
+                <div>
+                    <p>Варшава → Денпасар-Бали</p>
+                    <p>от 25 573 &#164;</p>
+                </div>
             </div>
         </article>
         <article id="top-ten">
