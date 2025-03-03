@@ -23,7 +23,6 @@
         min-width: 136px;
         min-height: 64px;
         padding: 1em;
-        /*border-bottom: 1px solid gray;*/
     }
 
     #from, #to, #passengers {
@@ -63,6 +62,12 @@
         border-radius: 0 0 5px 5px;
     }
 
+    #telegram-manage {
+        background: transparent url("../img/telegram-manage.png") no-repeat right 1em bottom;
+    }
+    #bus-china-europe {
+        background: transparent url("../img/bus-china-europe.png") no-repeat right bottom 1em ;
+    }
     #pops {
         display: flex;
         flex-direction: column;
@@ -76,17 +81,15 @@
         padding: .9em;
     }
 
-    #pops div:first-child {
-        border-radius: 10px 10px 0 0;
-    }
-
-    #pops div:last-child {
-        border-radius: 0 0 10px 10px;
-    }
-
+    /*#pops div:first-child {*/
+    /*    border-radius: 10px 10px 0 0;*/
+    /*}*/
+    /*#pops div:last-child {*/
+    /*    border-radius: 0 0 10px 10px;*/
+    /*}*/
     #pops p:nth-child(2n) {
         color: var(--accent-color);
-        line-height: 2em;
+        /*line-height: 2em;*/
     }
 
 }
@@ -161,6 +164,22 @@
         gap: 1em;
     }
 
+    main aside section {
+        flex-grow: 1;
+    }
+
+    #swap {
+        left: auto;
+        right: 1.3em;
+        top: 3em;
+        transform: rotate(0deg);
+    }
+
+    main > aside {
+        display: flex;
+        gap: 1em;
+    }
+
     /*main aside {*/
     /*    flex-grow: 1;*/
     /*}*/
@@ -171,10 +190,24 @@
         gap: 1.5em;
     }
 
+    #main-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        /*grid-template-rows: repeat(auto-fit, 1fr);*/
+        gap: 1.5em;
+    }
+
     #pops {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 3em;
+        row-gap: 1px;
+        margin: 1em 0;
+    }
+
+    #pops div {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5em;
     }
 
     /*#pops section {*/
@@ -483,7 +516,7 @@ footer a {
 
 }*/
 #faq {
-    
+
 }
 
 #best-offers {
