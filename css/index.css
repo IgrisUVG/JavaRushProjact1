@@ -62,12 +62,6 @@
         border-radius: 0 0 5px 5px;
     }
 
-    #telegram-manage {
-        background: transparent url("../img/telegram-manage.png") no-repeat right 1em bottom;
-    }
-    #bus-china-europe {
-        background: transparent url("../img/bus-china-europe.png") no-repeat right bottom 1em ;
-    }
     #pops {
         display: flex;
         flex-direction: column;
@@ -175,7 +169,7 @@
         transform: rotate(0deg);
     }
 
-    main > aside {
+    #banners {
         display: flex;
         gap: 1em;
     }
@@ -183,11 +177,19 @@
     /*main aside {*/
     /*    flex-grow: 1;*/
     /*}*/
-    main aside section {
+    #banners section {
         /*display: grid;*/
         /*grid-template-columns: 2fr 1fr;*/
         /*grid-template-rows: repeat(auto-fit, 1fr);*/
         gap: 1.5em;
+    }
+
+    #telegram-manage {
+        background: transparent url("../img/telegram-manage.png") no-repeat right 1em bottom;
+    }
+
+    #bus-china-europe {
+        background: transparent url("../img/bus-china-europe.png") no-repeat right bottom 1em;
     }
 
     #main-content {
@@ -443,10 +445,24 @@ form button {
     margin: 1em 0;
     padding: 1.5em;
 }
-
+#banners p {
+    color: #888;
+    font-size: .8em;
+}
 /*#banners .wrap {*/
 /*    margin: 1em 0;*/
 /*}*/
+
+#telegram-manage a {
+    background-color: #ffe8ed;
+    color: var(--accent-color);
+    padding: .7em 1em;
+    border-radius: 5px;
+}
+
+#bus-china-europe {
+
+}
 
 #banners p:before {
     content: url("../img/icons/check-smooth.svg");
@@ -502,10 +518,10 @@ footer a {
 }
 
 
-/*#faq p,*/
-/*#hot p {*/
-/*    padding-bottom: 1.5em;*/
-/*}*/
+#faq p,
+#hot p {
+    padding-bottom: 1.5em;
+}
 
 #hot p {
     font-size: .9em;
@@ -516,7 +532,7 @@ footer a {
 
 }*/
 #faq {
-
+    line-height: 2em;
 }
 
 #best-offers {
@@ -524,7 +540,7 @@ footer a {
     background-color: #d0d1fb;
     background-image: url("../img/icons/subscribe-laptop.svg");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: top 1em right 1em;
     background-size: 100px 100px;
 }
 
