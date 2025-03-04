@@ -62,6 +62,15 @@
         border-radius: 0 0 5px 5px;
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #banners {
+        order: -1;
+    }
+
     #pops {
         display: flex;
         flex-direction: column;
@@ -170,18 +179,19 @@
     }
 
     #banners {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1em;
     }
 
-    /*main aside {*/
-    /*    flex-grow: 1;*/
-    /*}*/
+    #banners p {
+        display: inline-block;
+    }
     #banners section {
         /*display: grid;*/
         /*grid-template-columns: 2fr 1fr;*/
         /*grid-template-rows: repeat(auto-fit, 1fr);*/
-        gap: 1.5em;
+        /*gap: 1.5em;*/
     }
 
     #telegram-manage {
@@ -445,10 +455,18 @@ form button {
     margin: 1em 0;
     padding: 1.5em;
 }
+
+#banners section div {
+    padding: .8em 0;
+}
+#banners section a {
+    display: inline-block;
+}
 #banners p {
     color: #888;
     font-size: .8em;
 }
+
 /*#banners .wrap {*/
 /*    margin: 1em 0;*/
 /*}*/
@@ -456,12 +474,15 @@ form button {
 #telegram-manage a {
     background-color: #ffe8ed;
     color: var(--accent-color);
-    padding: .7em 1em;
+    padding: .7em 1.5em;
     border-radius: 5px;
 }
 
-#bus-china-europe {
-
+#bus-china-europe a {
+    background-color: var(--accent-color);
+    color: white;
+    padding: .7em 1.5em;
+    border-radius: 5px;
 }
 
 #banners p:before {
@@ -537,10 +558,7 @@ footer a {
 
 #best-offers {
     /*display: grid;*/
-    background-color: #d0d1fb;
-    background-image: url("../img/icons/subscribe-laptop.svg");
-    background-repeat: no-repeat;
-    background-position: top 1em right 1em;
+    background: #d0d1fb url("../img/icons/subscribe-laptop.svg") no-repeat top 1em right 1em;
     background-size: 100px 100px;
 }
 
