@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бронирование авиабилетов</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<!-- ↓↓ Календарь ↓↓ -->
 <dialog class="calendar-container">
     <div class="calendar">
         <div class="calendar-header">
@@ -18,116 +20,31 @@
             <button class="calendar-month-control calendar-month-control-rev">Назад</button>
             <button class="calendar-month-control calendar-month-control-fwd">Вперёд</button>
         </div>
-        <div class="calendar-dates">
-            <div class="calendar-month">
-                <div class="calendar-month-name">Сентябрь 2024</div>
-                <div class="calendar-month-dates">
-                    <ul class="calendar-month-date-names">
-                        <li>пн</li>
-                        <li>вт</li>
-                        <li>ср</li>
-                        <li>чт</li>
-                        <li>пт</li>
-                        <li>сб</li>
-                        <li>вс</li>
-                    </ul>
-                    <ul class="calendar-month-dates-days">
-                        <li class="calendar-month-dates-day-past"></li>
-                        <li class="calendar-month-dates-day-past"></li>
-                        <li class="calendar-month-dates-day-past"></li>
-                        <li class="calendar-month-dates-day-past"></li>
-                        <li class="calendar-month-dates-day-past"></li>
-                        <li class="calendar-month-dates-day-past">1</li>
-                        <li class="calendar-month-dates-day-past">2</li>
-                        <li class="calendar-month-dates-day-past">3</li>
-                        <li class="calendar-month-dates-day-past">4</li>
-                        <li class="calendar-month-dates-day-past">5</li>
-                        <li class="calendar-month-dates-day-past">6</li>
-                        <li class="calendar-month-dates-day-past">7</li>
-                        <li class="calendar-month-dates-day-past">8</li>
-                        <li class="calendar-month-dates-day-past">9</li>
-                        <li class="calendar-month-dates-day-past">10</li>
-                        <li class="calendar-month-dates-day-past">11</li>
-                        <li class="calendar-month-dates-day-past">12</li>
-                        <li class="calendar-month-dates-day-past">13</li>
-                        <li class="calendar-month-dates-day-past">14</li>
-                        <li class="calendar-month-dates-day-past">15</li>
-                        <li class="calendar-month-dates-day-past">16</li>
-                        <li class="calendar-month-dates-day-past">17</li>
-                        <li class="calendar-month-dates-day-past">18</li>
-                        <li class="calendar-month-dates-day-past">19</li>
-                        <li class="calendar-month-dates-day-past">20</li>
-                        <li class="calendar-month-dates-day-past">21</li>
-                        <li class="calendar-month-dates-day-past">22</li>
-                        <li class="calendar-month-dates-day-past">23</li>
-                        <li class="calendar-month-dates-day-past">24</li>
-                        <li class="calendar-month-dates-day-past">25</li>
-                        <li class="calendar-month-dates-day-past">26</li>
-                        <li class="calendar-month-dates-day-today">27</li>
-                        <li class="calendar-month-dates-day-past">28</li>
-                        <li class="calendar-month-dates-day-past">29</li>
-                        <li class="calendar-month-dates-day-past">30</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="calendar-month">
-                <div class="calendar-month-name">Май 2024</div>
-                <div class="calendar-month-dates">
-                    <ul class="calendar-month-date-names">
-                        <li>пн</li>
-                        <li>вт</li>
-                        <li>ср</li>
-                        <li>чт</li>
-                        <li>пт</li>
-                        <li>сб</li>
-                        <li>вс</li>
-                    </ul>
-                    <ul class="calendar-month-dates-days">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li class="calendar-month-dates-day-from">9</li>
-                        <li class="calendar-month-dates-day-in-range">10</li>
-                        <li class="calendar-month-dates-day-in-range">11</li>
-                        <li class="calendar-month-dates-day-in-range">12</li>
-                        <li class="calendar-month-dates-day-in-range">13</li>
-                        <li class="calendar-month-dates-day-in-range">14</li>
-                        <li class="calendar-month-dates-day-in-range">15</li>
-                        <li class="calendar-month-dates-day-in-range">16</li>
-                        <li class="calendar-month-dates-day-in-range">17</li>
-                        <li class="calendar-month-dates-day-to">18</li>
-                        <li>19</li>
-                        <li>20</li>
-                        <li>21</li>
-                        <li>22</li>
-                        <li>23</li>
-                        <li>24</li>
-                        <li>25</li>
-                        <li>26</li>
-                        <li>27</li>
-                        <li>28</li>
-                        <li>29</li>
-                        <li>30</li>
-                        <li>31</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div class="calendar-dates"></div>
         <div class="calendar-note">
             Для отображения цен необходимо выбрать маршрут
         </div>
     </div>
 </dialog>
+<template id="calendar-template">
+    <div class="calendar-month">
+        <div class="calendar-month-name">Сентябрь 2024</div>
+        <div class="calendar-month-dates">
+            <ul class="calendar-month-date-names">
+                <li>пн</li>
+                <li>вт</li>
+                <li>ср</li>
+                <li>чт</li>
+                <li>пт</li>
+                <li>сб</li>
+                <li>вс</li>
+            </ul>
+            <ul class="calendar-month-dates-days">
+            </ul>
+        </div>
+    </div>
+</template>
+<!-- ↑↑ Календарь ↑↑ -->
 <header>
     <div>
         <div id="site-head">
@@ -151,7 +68,7 @@
                 <li><a href="#">Страхование</a></li>
             </ul>
         </nav>
-        <form>
+        <form action="">
             <fieldset>
                 <label for="from">Откуда</label>
                 <input list="from-airports" value="Варшава" id="from">
