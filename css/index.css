@@ -110,14 +110,44 @@
         flex-direction: column;
     }
 
-    #links h4 {
-        padding: .8em 0;
+    #links article {
+        display: flex;
+        justify-content: space-between;
         border-bottom: #ccc 1px solid;
     }
 
-    #links p, #links a {
+    #links h4 {
+        padding: .8em 0;
+    }
+
+    #links p {
         display: none;
     }
+
+    #links a::after {
+        content: url("../img/icons/chevron-smooth.svg");
+        margin-right: 5px;
+    }
+
+    #links a span {
+        display: none;
+    }
+
+    #programs {
+        flex-direction: column;
+    }
+
+    #programs div:first-child {
+        color: #3a92f8;
+        border: 1px solid;
+        border-radius: 5px;
+        width: 250px;
+        height: 45px;
+        margin-right: 1.5em;
+        text-align: center;
+        padding-top: calc(45px / 4);
+    }
+
 }
 
 /*——————————————————————————————————————————————————————*/
@@ -234,7 +264,9 @@
         border-top: 1px solid #d0d1fb;
         padding-top: 2em;
     }
-
+    #programs {
+        flex-direction: row;
+    }
     #programs div:first-child {
         color: #3a92f8;
         border: 1px solid;
