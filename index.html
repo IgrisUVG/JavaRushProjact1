@@ -67,7 +67,7 @@
                 <li><a href="#">Страхование</a></li>
             </ul>
         </nav>
-        <form>
+        <form id="search-flights">
             <fieldset>
                 <label for="from">Откуда</label>
                 <input list="from-airports" value="Варшава" id="from">
@@ -283,9 +283,11 @@
             <p>Лучшие предложения для путешествий</p>
             <!--            <img src="img/icons/subscribe-laptop.svg">-->
             <form>
-                <input type="email" placeholder="Email *">
+<!--                <label for="best-offers-email">Email *</label>-->
+                <input type="email" id="best-offers-email" placeholder="Email *">
+<!--                <div id="best-offers-exclam"><img src="img/icons/exclamation.svg" alt=""></div>-->
                 <button type="button">
-                    <img src="img/icons/chevron-smooth-w.svg">
+                    <img src="img/icons/chevron-smooth-w.svg" alt="">
                     <span>Подписаться</span>
                 </button>
             </form>
@@ -328,7 +330,7 @@
                 <p><a href="#">Грузия</a></p>
                 <p><a href="#">Польша</a></p>
                 <p><a href="#">Франция</a></p>
-                <a href="#">Все страны →</a>
+                <a href="#"><span>Все страны →</span></a>
             </article>
             <article>
                 <h4>Города</h4>
@@ -338,7 +340,7 @@
                 <p><a href="#">Прага</a></p>
                 <p><a href="#">Париж</a></p>
                 <p><a href="#">Франкфурт</a></p>
-                <a href="#">Все города →</a>
+                <a href="#"><span>Все города →</span></a>
             </article>
             <article>
                 <h4>Направления</h4>
@@ -348,7 +350,7 @@
                 <p><a href="#">Варшава - Париж</a></p>
                 <p><a href="#">Кишинев - Тбилиси</a></p>
                 <p><a href="#">Варшава - Стамбул</a></p>
-                <a href="#">Все направления →</a>
+                <a href="#"><span>Все направления →</span></a>
             </article>
             <article>
                 <h4>Аэропорты</h4>
@@ -358,7 +360,7 @@
                 <p><a href="#">Фиумичино(Рим)</a></p>
                 <p><a href="#">Аэропорт Стамбула (Ста...</a></p>
                 <p><a href="#">Шарль Де Голль (Париж)</a></p>
-                <a href="#">Все аэропорты →</a>
+                <a href="#"><span>Все аэропорты →</span></a>
             </article>
             <article>
                 <h4>Авиакомпании</h4>
@@ -367,7 +369,7 @@
                 <p><a href="#">Qatar Airways</a></p>
                 <p><a href="#">Ryanair</a></p>
                 <p><a href="#">Air Baltic</a></p>
-                <a href="#">Все авиакомпании →</a>
+                <a href="#"><span>Все авиакомпании →</span></a>
             </article>
             <article>
                 <h4>Наши сервисы</h4>
@@ -375,7 +377,7 @@
                 <p><a href="#">Сравнение цен</a></p>
                 <p><a href="#">Расписание рейсов</a></p>
                 <p><a href="#">Акции</a></p>
-                <a href="#">Карта сайта →</a>
+                <a href="#"><span>Карта сайта →</span></a>
             </article>
         </section>
         <section>

@@ -95,6 +95,29 @@
         /*line-height: 2em;*/
     }
 
+    /*#links,*/
+    /*footer section:last-child,*/
+    #partners {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.5em 0;
+        border-bottom: #ccc 1px solid;
+    }
+
+    #links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #links h4 {
+        padding: .8em 0;
+        border-bottom: #ccc 1px solid;
+    }
+
+    #links p, #links a {
+        display: none;
+    }
 }
 
 /*——————————————————————————————————————————————————————*/
@@ -111,32 +134,11 @@
 
 /*——————————————————————————————————————————————————————*/
 @media (min-width: 1200px) {
-    /*nav ul {*/
-    /*    display: flex;*/
-    /*    list-style-type: none;*/
-    /*    padding: 1em;*/
-    /*    vertical-align: baseline;*/
-    /*}*/
-    /*#lang a,*/
-    /*nav ul li a {*/
-    /*    color: white;*/
-    /*    font-size: .85em;*/
-    /*    text-wrap: nowrap;*/
-    /*    margin: 0 1em 0 0;*/
-    /*}*/
+
     #lang a span {
         display: inline;
     }
 
-    /*#lang::before {*/
-    /*    !*content: '\1F310';*!*/
-    /*    content: url("../img/icons/language.svg");*/
-    /*    display: inline-block;*/
-    /*    width: 20px;*/
-    /*    vertical-align: middle;*/
-    /*    line-height: 1;*/
-    /*    margin-right: 5px;*/
-    /*}*/
     form {
         display: grid;
         grid-template-areas:
@@ -162,15 +164,6 @@
         border-radius: 0 5px 5px 0;
     }
 
-    main > aside {
-        display: flex;
-        gap: 1em;
-    }
-
-    main aside section {
-        flex-grow: 1;
-    }
-
     #swap {
         left: auto;
         right: 1.3em;
@@ -186,12 +179,6 @@
 
     #banners p {
         display: inline-block;
-    }
-    #banners section {
-        /*display: grid;*/
-        /*grid-template-columns: 2fr 1fr;*/
-        /*grid-template-rows: repeat(auto-fit, 1fr);*/
-        /*gap: 1.5em;*/
     }
 
     #telegram-manage {
@@ -222,14 +209,6 @@
         padding: 1.5em;
     }
 
-    /*#pops section {*/
-    /*    display: flex;*/
-    /*    justify-content: space-between;*/
-    /*}*/
-    /*#links {*/
-    /*    display: grid;*/
-    /*    grid-template-columns: repeat(6, 1fr);*/
-    /*}*/
     #partners,
     #links,
     footer section:last-child {
@@ -360,18 +339,18 @@ nav ul li a {
     align-items: center;
 }
 
-form {
+#search-flights {
     position: relative;
 }
 
-form input {
+#search-flights input {
     display: block;
     outline: none;
     padding: 1em;
     /*border: none;*/
 }
 
-form label {
+#search-flights label {
     display: block;
     position: absolute;
     color: #aaa;
@@ -405,7 +384,7 @@ form label {
     position: absolute;
 }
 
-form button {
+#search-flights button {
     grid-area: find-button;
     width: 100%;
     height: 100%;
@@ -459,17 +438,15 @@ form button {
 #banners section div {
     padding: .8em 0;
 }
+
 #banners section a {
     display: inline-block;
 }
+
 #banners p {
     color: #888;
     font-size: .8em;
 }
-
-/*#banners .wrap {*/
-/*    margin: 1em 0;*/
-/*}*/
 
 #telegram-manage a {
     background-color: #ffe8ed;
@@ -556,17 +533,52 @@ footer a {
     line-height: 2em;
 }
 
+/* ↓↓ Лучшие предложения для путешествий* ↓↓ */
 #best-offers {
     /*display: grid;*/
     background: #d0d1fb url("../img/icons/subscribe-laptop.svg") no-repeat top 1em right 1em;
     background-size: 100px 100px;
 }
 
-#best-offers form {
-    display: flex;
+#best-offers p {
+    font-size: 1.3em;
+    color: #333;
+    padding: 3em 0;
 }
 
-#best-offers button {
+#best-offers form {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+#best-offers form input {
+    flex-grow: 3;
+    border: 1px solid var(--accent-color);
+    padding: 1em;
+    border-radius: 3px;
+}
+
+#best-offers form input::after {
+    content: url("../img/icons/exclamation.svg");
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    transform: translateY(-50%);
+}
+
+#best-offers-exclam {
+    position: absolute;
+    left: 80%;
+    right: 1.3em;
+}
+
+#best-offers form button {
+    flex-grow: 1;
+    background-color: var(--accent-color);
+    min-width: 50px;
+    border-radius: 3px;
     /*background: var(--accent-color) url("../img/icons/chevron-smooth-w.svg") no-repeat center center;*/
 }
 
@@ -578,6 +590,8 @@ footer a {
 #best-offers form span {
     display: none;
 }
+
+/* ↑↑ Лучшие предложения для путешествий* ↑↑ */
 
 footer {
     background-color: white;
