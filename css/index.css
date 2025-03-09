@@ -161,7 +161,6 @@
     /*    left: 5em;*/
     /*    font-size: .7em;*/
     /*}*/
-
     /* ↑↑ Поиск рейсов ↑↑ */
     /* ↓↓ Основной контент ↓↓ */
     main {
@@ -374,17 +373,6 @@
         left: calc(70% + .5em);
     }
 
-    /*label[for="from"]::after {*/
-    /*    content: "";*/
-    /*    display: block;*/
-    /*    width: 32px;*/
-    /*    height: 32px;*/
-    /*    border: 1px solid var(--accent-color);*/
-    /*    border-radius: 50%;*/
-    /*    background: white url("../img/icons/swap.svg") no-repeat center;*/
-    /*    position: absolute;*/
-    /*    left: 10%;*/
-    /*}*/
     #swap {
         left: 16.2%;
         right: auto;
@@ -617,6 +605,7 @@ nav ul li a {
 }
 
 #search-flights input {
+    position: relative;
     display: block;
     outline: none;
     padding: 1em;
@@ -628,6 +617,7 @@ nav ul li a {
     position: absolute;
     color: #aaa;
     font-size: 20px;
+    z-index: 100;
 }
 
 #swap {
@@ -827,9 +817,13 @@ footer a {
     width: 100%;
 }
 
-#best-offers form input {
+#best-offers-email {
     flex-grow: 3;
+}
+
+#best-offers form input {
     border: 1px solid var(--accent-color);
+    width: 100%;
     padding: 1em;
     border-radius: 3px;
 }
@@ -838,14 +832,6 @@ footer a {
     border: solid dodgerblue;
 }
 
-#best-offers form input::after {
-    content: url("../img/icons/exclamation.svg");
-    z-index: 100;
-    position: absolute;
-    top: 50%;
-    left: 1em;
-    transform: translateY(-50%);
-}
 
 #best-offers-exclam {
     position: absolute;
@@ -868,6 +854,18 @@ footer a {
 
 #best-offers form span {
     display: none;
+}
+
+#best-offers-email {
+    position: relative;
+}
+
+#best-offers-email::after {
+    content: url("../img/icons/exclamation.svg");
+    z-index: 100;
+    position: absolute;
+    top: -25%;
+    right: 1em;
 }
 
 /* ↑↑ Лучшие предложения для путешествий* ↑↑ */
