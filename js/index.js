@@ -11,6 +11,8 @@ const ClassName = {
     DATE: "calendar-month-dates-day",
     PAST_DATE: "calendar-month-dates-day-past",
     TODAY: "calendar-month-dates-day-today",
+    FROM: "calendar-month-dates-day-from",
+    TO: "calendar-month-dates-day-to",
 };
 
 function getMonth(idx) {
@@ -96,11 +98,14 @@ function hideCalendarDialog() {
 }
 
 function highlightRange(container, dateFrom, dateTo) {
-    const dateFromElement = container.querySelector(`.${ClassName.DATE}`);
-    const dateToElement = container.querySelector(`.${ClassName.DATE}`);
+    const dateFromElement = container.querySelector(`.${ClassName.DATE}[data-date="${dateFrom}.toISOString()]"]`);
+    const dateToElement = container.querySelector(`.${ClassName.DATE}[data-date="${dateTo}.toISOString()]`);
 
     console.log(dateFromElement);
     console.log(dateToElement);
+
+    // dateFromElement.classList.add(ClassName.FROM);
+    // dateToElement.classList.add(ClassName.TO);
 }
 
 function initializeDatePicker(dateFromElement, dateToElement) {
@@ -122,6 +127,10 @@ function initializeDatePicker(dateFromElement, dateToElement) {
         showCalendarDialog();
         renderCalendarMonth(monthContainer, new Date().getMonth());
         renderCalendarMonth(monthContainer, new Date().getMonth() + 1);
+
+        highlightRange(monthContainer,
+            new Date(2025, 2, 10, 0, 0, 0, 0),
+            new Date(2025, 2, 15, 0, 0, 0, 0));
 
         isCalendarOpen = true;
     }
