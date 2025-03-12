@@ -95,8 +95,18 @@ function hideCalendarDialog() {
     clearCalendarMonths();
 }
 
+function highlightRange(container, dateFrom, dateTo) {
+    const dateFromElement = container.querySelector(`.${ClassName.DATE}`);
+    const dateToElement = container.querySelector(`.${ClassName.DATE}`);
+
+    console.log(dateFromElement);
+    console.log(dateToElement);
+}
+
 function initializeDatePicker(dateFromElement, dateToElement) {
     let isCalendarOpen = false;
+
+    highlightRange(monthContainer, new Date(2025, 2, 10), new Date(2025, 2, 15));
 
     const selectedDates = {
         FROM: null,
@@ -160,3 +170,21 @@ initializeDatePicker(
     // document.querySelector("#date-to"),
     document.querySelector("#back"),
 );
+
+//////////////////
+document.getElementById('searchButton').addEventListener('click', () => {
+    const form = {
+        from: document.getElementById('from').value,
+        to: document.getElementById('to').value,
+        there: document.getElementById('there').value,
+        back: document.getElementById('back').value,
+        // passengers: {
+        //     adults: document.getElementById('adults').value,
+        //     children: document.getElementById('children').value,
+        //     infants: document.getElementById('infants').value
+        // },
+        // class: document.getElementById('class').value
+    };
+
+    console.log('Результат поиска:', form);
+});

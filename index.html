@@ -74,14 +74,17 @@
                 <label for="from">Откуда</label>
                 <input list="from-airports" value="Варшава" id="from">
                 <datalist id="from-airports">
-                    <option value="Варшава" label="Выбранный город">
-                    <option value="Кишинев">
-                    <option value="Балице">
+                    <option value="Варшава" label="">
+                    <option value="Кишинев" label="">
+                    <option value="Балице" label="">
                 </datalist>
                 <label for="to">Куда</label>
                 <input list="to-airports" id="to">
                 <datalist id="to-airports">
-
+                    <option value="Ангбанд" label="">
+                    <option value="Гондолин" label="">
+                    <option value="Менегрот" label="">
+                    <option value="Нарготронд" label="">
                 </datalist>
                 <div id="swap"><img src="img/icons/swap.svg" alt=""></div>
                 <label for="there">Туда</label>
@@ -90,7 +93,7 @@
                 <input id="back">
                 <label for="passengers">Пассажиры, класс</label>
                 <input id="passengers">
-                <!--div-- id="choice-passengers" class="collapsed">
+                <!--div id="choice-passengers" class="collapsed">
                     <p>Максимум 9 пассажиров</p>
                     <section>
                         <p>Взрослые</p>
@@ -124,14 +127,14 @@
                     <button type="button">OK</button>
                 </div-->
             </fieldset>
-            <button type="button">Найти</button>
+            <button type="button" id="searchButton">Найти</button>
             <p id="multiroute"><a href="#">Сложный маршрут</a></p>
         </form>
     </div>
 </header>
 <main>
     <section id="main-content">
-        <article>
+        <article id="pop-dest">
             <h2>Популярные направления</h2>
             <div id="pops">
                 <div>
@@ -234,7 +237,7 @@
                 </article>
             </div>
         </article>
-        <article>
+        <article id="hot-sales">
             <h2>Горящие распродажи авиарейсов</h2>
             <div id="hot" class="wrap">
                 <h4>Как найти авиабилеты со скидкой онлайн</h4>
@@ -270,7 +273,7 @@
                     сезон для путешествий по тем или иным маршрутам.</p>
             </div>
         </article>
-        <article>
+        <article id="faq-crutch">
             <h2>Частые вопросы</h2>
             <div id="faq" class="wrap ">
                 <p><a href="#">Как забронировать авиабилет</a></p>
