@@ -1010,6 +1010,7 @@ footer {
     background: #ccc;
 }
 
+.calendar-month-dates-day:not(.calendar-month-dates-day-past):hover,
 .calendar-month-dates-day-today,
 .calendar-month-dates-day-from,
 .calendar-month-dates-day-to {
@@ -1017,6 +1018,7 @@ footer {
     position: relative;
 }
 
+.calendar-month-dates-day:not(.calendar-month-dates-day-past):hover::before,
 .calendar-month-dates-day-today::before,
 .calendar-month-dates-day-from::before,
 .calendar-month-dates-day-to::before {
@@ -1034,15 +1036,19 @@ footer {
     content: "Сегодня";
 }
 
+.calendar-month-dates-day:not(.calendar-month-dates-day-past):hover,
 .calendar-month-dates-day-from,
 .calendar-month-dates-day-to {
     background: var(--highlight-color);
     color: #fff;
 }
 
+.calendar-month-dates-day:not(.calendar-month-dates-day-past):hover::before,
 .calendar-month-dates-day-from::before,
 .calendar-month-dates-day-to::before {
     background: var(--highlight-color);
+    display: block;
+    content: "Туда";
 }
 
 .calendar-month-dates-day-from::before {
