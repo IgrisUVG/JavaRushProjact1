@@ -305,6 +305,10 @@
     #lang a span {
         display: inline;
     }
+    .menu-item::after,
+    #lang::after {
+        content: url("../img/icons/bullet.svg");
+    }
 
     /* ↓↓ Поиск рейсов ↓↓ */
     form {
